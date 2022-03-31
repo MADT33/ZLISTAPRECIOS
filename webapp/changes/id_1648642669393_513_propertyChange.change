@@ -1,0 +1,41 @@
+{
+    "fileName": "id_1648642669393_513_propertyChange",
+    "fileType": "change",
+    "changeType": "propertyChange",
+    "moduleName": "",
+    "reference": "vital.ZCOMERCIALIZACION",
+    "packageName": "",
+    "content": {
+        "property": "width",
+        "newValue": "5rem"
+    },
+    "selector": {
+        "id": "vital.ZCOMERCIALIZACION::sap.suite.ui.generic.template.AnalyticalListPage.view.AnalyticalListPage::ZCDS_COM_V023_AResults--table-werks",
+        "idIsLocal": false,
+        "type": "sap.m.Column"
+    },
+    "layer": "CUSTOMER_BASE",
+    "texts": {},
+    "namespace": "apps/vital.ZCOMERCIALIZACION/changes/",
+    "projectId": "",
+    "creation": 1648642669393,
+    "originalLanguage": "",
+    "support": {
+        "generator": "changeUtils: SAPFioriTools",
+        "service": "",
+        "user": "",
+        "sapui5Version": "1.100.0",
+        "sourceChangeFileName": "",
+        "compositeCommand": ""
+    },
+    "oDataInformation": {},
+    "dependentSelector": {},
+    "validAppVersions": {
+        "from": "1.0.0",
+        "to": "1.0.0",
+        "creation": "1.0.0"
+    },
+    "jsOnly": false,
+    "variantReference": "",
+    "appDescriptorChange": false
+}

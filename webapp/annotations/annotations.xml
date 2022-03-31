@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+	<edmx:Reference Uri="/sap/bc/ui5_ui5/ui2/ushell/resources/sap/ushell/components/factsheet/vocabularies/UI.xml">
+		<edmx:Include Alias="UI" Namespace="com.sap.vocabularies.UI.v1"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="/sap/opu/odata/sap/ZSD_EVAL_MAT_S4_CDS_SRV/$metadata">
+		<edmx:Include Alias="ZSD_EVAL_MAT_S4_CDS_SRV" Namespace="ZSD_EVAL_MAT_S4_CDS_SRV"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="http://docs.oasis-open.org/odata/odata-data-aggregation-ext/v4.0/cs02/vocabularies/Org.OData.Aggregation.V1.xml">
+		<edmx:Include Alias="Aggregation" Namespace="Org.OData.Aggregation.V1"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/vocabularies/Org.OData.Capabilities.V1.xml">
+		<edmx:Include Alias="Capabilities" Namespace="Org.OData.Capabilities.V1"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="https://wiki.scn.sap.com/wiki/download/attachments/448470974/Common.xml?api=v2">
+		<edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="https://wiki.scn.sap.com/wiki/download/attachments/448470971/Communication.xml?api=v2">
+		<edmx:Include Alias="vCard" Namespace="com.sap.vocabularies.Communication.v1"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/vocabularies/Org.OData.Core.V1.xml">
+		<edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/vocabularies/Org.OData.Measures.V1.xml">
+		<edmx:Include Alias="CQP" Namespace="Org.OData.Measures.V1"/>
+	</edmx:Reference>
+	<edmx:DataServices>
+		<Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="vital.ZCOMERCIALIZACION.ZSD_EVAL_MAT_S4_CDS_SRV">
+			<!--===============================================================================
+                Entity Type from chosen collection 
+                ================================================================================-->
+			<Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_COM_V023_AResult">
+     
+				 <Annotation Term="UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>MATNR</PropertyPath>
+                        <PropertyPath>WERKS</PropertyPath>
+                        <PropertyPath>vtweg</PropertyPath>
+                        <PropertyPath>kschl</PropertyPath>
+                        <!--<PropertyPath>P_FHasta</PropertyPath>-->              
+                    </Collection>
+                </Annotation>
+                <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_COM_V023_AResult/kschl">
+                     <Annotation Term="Common.FilterDefaultValue" String="VKP0"/>
+                </Annotations>
+                 <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_COM_V023_AResult/vtweg">
+                     <Annotation Term="Common.FilterDefaultValue" String="SA"/>
+                </Annotations>
+
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<!--<Record Type="UI.DataField">-->
+						<!--	<PropertyValue Property="Value" Path="ID"/>-->
+						<!--</Record>-->
+						<!--<Record Type="UI.DataField">-->
+						<!--	<PropertyValue Property="Value" Path="cont"/>-->
+						<!--	<PropertyValue Property="Label" String="{@i18n&gt;cont}" />-->
+							
+						<!--</Record>-->
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="datab"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="datbi"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="erdat"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="ernam"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="Precio"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="kschl"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="matnr"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;matnr}" />
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="vtext"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="vtweg"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="werks"/>
+                            <PropertyValue Property="Label" String="{@i18n&gt;werks}" />
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="WerksName"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;WerksName}" />
+						</Record>
+					</Collection>
+					
+				</Annotation>
+				<Annotations Target="ZCDS_COM_V023_AParameters">
+					 <Annotation Term="UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>P_FDesde</PropertyPath>
+                        <PropertyPath>P_FHasta</PropertyPath>
+                    </Collection>
+                </Annotation>
+				
+				</Annotations>
+			</Annotations>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

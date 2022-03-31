@@ -1,0 +1,740 @@
+<edmx:Edmx
+    xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../../sap/zsd_eval_mat_s4_cds_srv/$metadata">
+        <edmx:Include Namespace="ZSD_EVAL_MAT_S4_CDS_SRV" Alias="SAP"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema
+            xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="zsd_eval_mat_s4_cds_anno_mdl.v1">
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.C_MM_MaterialValueHelpType/MaterialBaseUnit">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.C_MM_SupplierValueHelpType/FirstName">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.C_MM_SupplierValueHelpType/LastName">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.C_MM_SupplierValueHelpType/OrganizationBPName1">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.C_MM_SupplierValueHelpType/OrganizationBPName2">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.C_MM_SupplierValueHelpType/OrganizationBPName3">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.C_MM_SupplierValueHelpType/OrganizationBPName4">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.C_MM_SupplierValueHelpType/AuthorizationGroup">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.C_MM_SupplierValueHelpType/SupplierAccountGroup">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.C_MM_SupplierValueHelpType">
+                <Annotation Term="Communication.Contact">
+                    <Record>
+                        <PropertyValue Property="adr">
+                            <Collection>
+                                <Record>
+                                    <PropertyValue Property="type" EnumMember="Communication.ContactInformationType/preferred"/>
+                                    <PropertyValue Property="country" Path="Country"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Communication.Address">
+                    <Record>
+                        <PropertyValue Property="type" EnumMember="Communication.ContactInformationType/preferred"/>
+                        <PropertyValue Property="country" Path="Country"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.C_PurchasingGroupValueHelpType/EmailAddress">
+                <Annotation Term="Communication.IsEmailAddress"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.C_PurchasingGroupValueHelpType">
+                <Annotation Term="Communication.Contact">
+                    <Record>
+                        <PropertyValue Property="email">
+                            <Collection>
+                                <Record>
+                                    <PropertyValue Property="address" Path="EmailAddress"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_COM_V023_AResult/P_FDesde">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_COM_V023_AResult/P_FHasta">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_COM_V023_AResult/ID">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_COM_V073Type/ID">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_COM_V073_FResult/P_FDesde">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_COM_V073_FResult/P_FHasta">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_COM_V073_FResult/ID">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_COM_V073_FResult/LIFNR">
+                <Annotation Term="Common.SemanticObject" String="ZOVPProveedor"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_COM_V073_FResult/MATNR">
+                <Annotation Term="Common.SemanticObject" String="ZOVPMaterial"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_COM_V091Type/ID">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_COM_V093Type/ID">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_COM_V097_EType/ID">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_COM_V098Type/ID">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_COM_V104_DETType/ID">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_COM_V104_DETType/MATNR">
+                <Annotation Term="Common.SemanticObject" String="ZOVPMaterial"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_COM_V104_DETType/LIFNR">
+                <Annotation Term="Common.SemanticObject" String="ZOVPProveedor"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_DIAS_Y_STOCKType/ID">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_EVOLUCION_STOCKType/ID">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_MAT_DAT_BASICType/ID">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_MAT_DAT_BASIC2Type/ID">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_OC_ABIERTASResult/P_FDesde">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_OC_ABIERTASResult/P_FHasta">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_OC_ABIERTASResult/ID">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_OC_ABIERTASResult/MATNR">
+                <Annotation Term="Common.SemanticObject" String="ZOVPMaterial"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_OC_ABIERTASResult">
+                <Annotation Term="UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>EKGRP</PropertyPath>
+                        <PropertyPath>EKORG</PropertyPath>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_OC_ABIERTAS_DETResult/P_FDesde">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_OC_ABIERTAS_DETResult/P_FHasta">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_OC_ABIERTAS_DETResult/ID">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_OC_ABIERTAS_DETResult/MATNR">
+                <Annotation Term="Common.SemanticObject" String="ZOVPMaterial"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_OC_ABIERTAS_DETResult/LIFNR">
+                <Annotation Term="Common.SemanticObject" String="ZOVPProveedor"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_OC_ABIERTAS_DETResult">
+                <Annotation Term="UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>EKGRP</PropertyPath>
+                        <PropertyPath>EKORG</PropertyPath>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_OC_ABIERTAS_MOV2Result/P_FDesde">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_OC_ABIERTAS_MOV2Result/P_FHasta">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_OC_ABIERTAS_MOV2Result/ID">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_OC_ABIERTAS_MOV2Result/MATNR">
+                <Annotation Term="Common.SemanticObject" String="ZOVPMaterial"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_OC_ABIERTAS_MOV2Result/LIFNR">
+                <Annotation Term="Common.SemanticObject" String="ZOVPProveedor"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_OC_ABIERTAS_MOV2Result">
+                <Annotation Term="UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>EKGRP</PropertyPath>
+                        <PropertyPath>EKORG</PropertyPath>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_OC_ABIERTAS_MOV3Result/P_FDesde">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_OC_ABIERTAS_MOV3Result/P_FHasta">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_OC_ABIERTAS_MOV3Result/ID">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_OC_ABIERTAS_MOV3Result/MATNR">
+                <Annotation Term="Common.SemanticObject" String="ZOVPMaterial"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_OC_ABIERTAS_MOV3Result/LIFNR">
+                <Annotation Term="Common.SemanticObject" String="ZOVPProveedor"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_OC_ABIERTAS_MOV3Result">
+                <Annotation Term="UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>EKGRP</PropertyPath>
+                        <PropertyPath>EKORG</PropertyPath>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_PRECIOS_COMPETENCIAType/ID">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_PRECIOS_COMPETENCIA_DETResult/P_FDesde">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_PRECIOS_COMPETENCIA_DETResult/P_FHasta">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_PRECIOS_COMPETENCIA_DETResult/ID">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_PRECIOS_COMPETENCIA_DETResult/MATNR">
+                <Annotation Term="Common.SemanticObject" String="ZOVPMaterial"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_PRECIOS_COMPRAType/ID">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_PRECIOS_COMPRA_DETType/P_FDesde">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_PRECIOS_COMPRA_DETType/P_FHasta">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_PRECIOS_COMPRA_DET2Result/contador">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_PRECIOS_COMPRA_DET2Result/P_FDesde">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_PRECIOS_COMPRA_DET2Result/P_FHasta">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_PRECIOS_COMPRA_DET2Result/ID">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_PRECIOS_COMPRA_DET2Result/MATNR">
+                <Annotation Term="Common.SemanticObject" String="ZOVPMaterial"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_PRECIOS_COMPRA_DET2Result/LIFNR">
+                <Annotation Term="Common.SemanticObject" String="ZOVPProveedor"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_PRECIOS_COMPRA_DET2Result">
+                <Annotation Term="UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>LIFNR</PropertyPath>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_QUIEBRESType/ID">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_QUIEBRESType/MATNR">
+                <Annotation Term="Common.SemanticObject" String="ZOVPMaterial"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_QUIEBRESType/LIFNR">
+                <Annotation Term="Common.SemanticObject" String="ZOVPProveedor"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_TRASLADOSResult/P_FDesde">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_TRASLADOSResult/P_FHasta">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_TRASLADOSResult/ID">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_TRASLADOSResult/MATNR">
+                <Annotation Term="Common.SemanticObject" String="ZOVPMaterial"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_ULTIMAS_RECEPCIONESType/ID">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_ULTIMAS_RECEPCIONES_DETResult/ERFME">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_ULTIMAS_RECEPCIONES_DETResult/P_FDesde">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_ULTIMAS_RECEPCIONES_DETResult/P_FHasta">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_ULTIMAS_RECEPCIONES_DETResult/ID">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_ULTIMAS_RECEPCIONES_DETResult/MATNR">
+                <Annotation Term="Common.SemanticObject" String="ZOVPMaterial"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_ULTIMAS_RECEPCIONES_DETResult/LIFNR">
+                <Annotation Term="Common.SemanticObject" String="ZOVPProveedor"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_VENCIMIENTOSResult/P_FDesde">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_VENCIMIENTOSResult/P_FHasta">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_VENCIMIENTOSResult/ID">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_C_VENCIMIENTOS_DETType/ID">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_NIVEL_SERVICIOResult/P_FDesde">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_NIVEL_SERVICIOResult/P_FHasta">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_NIVEL_SERVICIOResult/ID">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_NIVEL_SERVICIOResult/MATNR">
+                <Annotation Term="Common.SemanticObject" String="ZOVPMaterial"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_NIVEL_SERVICIOResult/LIFNR">
+                <Annotation Term="Common.SemanticObject" String="ZOVPProveedor"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_NIVEL_SERVICIOResult">
+                <Annotation Term="UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>EKGRP</PropertyPath>
+                        <PropertyPath>EKORG</PropertyPath>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_OC_PEND_RECEPResult/P_FDesde">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_OC_PEND_RECEPResult/P_FHasta">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_OC_PEND_RECEPResult/ID">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_OC_PEND_RECEPResult/MATNR">
+                <Annotation Term="Common.SemanticObject" String="ZOVPMaterial"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_OC_PEND_RECEPResult/LIFNR">
+                <Annotation Term="Common.SemanticObject" String="ZOVPProveedor"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCDS_OC_PEND_RECEPResult">
+                <Annotation Term="UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>EKGRP</PropertyPath>
+                        <PropertyPath>EKORG</PropertyPath>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCProductObjPgType/CrsPlntConfigurableProductName">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCProductObjPgType/BaseUnit">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCProductObjPgType/InternationalArticleNumberCat">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCProductObjPgType/GrossWeight">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCProductObjPgType/WeightUnit">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCProductObjPgType/ProductMeasurement">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCProductObjPgType/BaseUnitSpecificProductLength">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCProductObjPgType/BaseUnitSpecificProductWidth">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCProductObjPgType/BaseUnitSpecificProductHeight">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCProductObjPgType/ProductMeasurementUnit">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCProductObjPgType/MaterialVolume">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCProductObjPgType/VolumeUnit">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCProductObjPgType/ProductImageURL">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.IsImageURL"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCProductObjPgType/ProductSeasonType1Name">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCProductObjPgType/ProductSeasonType2Name">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCProductObjPgType/ProductSeasonType3Name">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCProductObjPgType/ProductIsConfigurable">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCProductObjPgType/CrossPlantConfigurableProduct">
+                <Annotation Term="Common.SemanticObject" String="Material"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZCProductObjPgType">
+                <Annotation Term="UI.FieldGroup" Qualifier="administration">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="CreatedByUser"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="CreationDate"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="LastChangedByUser"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="LastChangeDate"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Label" String="Administration"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="header_1">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="ProductType"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="ProductGroup"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="ProductCategory"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="CrossPlantConfigurableProduct"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Label" String="Product Data 1"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="header_2">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="BaseUnit"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="ProductStandardID"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="InternationalArticleNumberCat"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Label" String="Product Data 2"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="measurements">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="GrossWeight"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="ProductMeasurement"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="MaterialVolume"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Label" String="Measurements"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="origin">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="Brand"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="CountryOfOrigin"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="RegionOfOrigin"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="ProductManufacturerNumber"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Label" String="Origin"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.HeaderInfo">
+                    <Record>
+                        <PropertyValue Property="TypeName" String="Product"/>
+                        <PropertyValue Property="TypeNamePlural" String="Products"/>
+                        <PropertyValue Property="ImageUrl" Path="ProductImageURL"/>
+                        <PropertyValue Property="Title">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Value" Path="ProductName"/>
+                            </Record>
+                        </PropertyValue>
+                        <PropertyValue Property="Description">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Value" Path="Product"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Product"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>Product</PropertyPath>
+                        <PropertyPath>ProductName</PropertyPath>
+                        <PropertyPath>ProductStandardID</PropertyPath>
+                        <PropertyPath>ProductGroup</PropertyPath>
+                        <PropertyPath>ProductCategory</PropertyPath>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="Common.SemanticObject" String="Material"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZMM_CDS_DET_COND_PAGOSResult/P_FDesde">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZMM_CDS_DET_COND_PAGOSResult/P_FHasta">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZMM_CDS_DET_COND_PAGOSResult/ID">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZMM_CDS_DET_COND_PAGOSResult/MATNR">
+                <Annotation Term="Common.SemanticObject" String="ZOVPMaterial"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.ZMM_CDS_DET_COND_PAGOSResult/LIFNR">
+                <Annotation Term="Common.SemanticObject" String="ZOVPProveedor"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.zmm_cds_evp_devResult/P_FDesde">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.zmm_cds_evp_devResult/P_FHasta">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.zmm_cds_evp_devResult/ID">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.zmm_cds_evp_devResult/LIFNR">
+                <Annotation Term="Common.SemanticObject" String="ZOVPProveedor"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.zmm_cds_evp_devResult/MATNR">
+                <Annotation Term="Common.SemanticObject" String="ZOVPMaterial"/>
+            </Annotations>
+            <Annotations Target="ZSD_EVAL_MAT_S4_CDS_SRV.zmm_cds_evp_devResult">
+                <Annotation Term="UI.FieldGroup" Qualifier="Documento">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="mblnr"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="zeile"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.Identification">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="bwart"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="maktg"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="budat"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="LIFNR"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="name1"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="MATNR"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="p_EKGRP"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="MATKL"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="WERKS"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="menge"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="grund"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="lbkum"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="total"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="usnam"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="budat"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="LIFNR"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="name1"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="MATNR"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="maktg"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="p_EKGRP"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="MATKL"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="WERKS"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="mblnr"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="bwart"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="menge"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="grund"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="lbkum"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="total"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="usnam"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>LIFNR</PropertyPath>
+                        <PropertyPath>MATNR</PropertyPath>
+                        <PropertyPath>p_EKGRP</PropertyPath>
+                        <PropertyPath>MATKL</PropertyPath>
+                        <PropertyPath>WERKS</PropertyPath>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
